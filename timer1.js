@@ -1,8 +1,10 @@
  
-let input = [10, 3, 5, 15, 9];
+let input = [1, -1, 3];
 
 input.forEach(element => {
-  setTimeout(() => {
-    process.stdout.write(".");
-  }, element * 1000);
+  if (element >= 0 && typeof element === "number") {
+    setTimeout(() => {
+      process.stdout.write(".");  //(`${element}`)
+    }, element * 1000);
+  }
 });
